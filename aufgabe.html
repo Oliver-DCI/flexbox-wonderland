@@ -25,6 +25,9 @@
       min-height: 100vh;
       overflow-x: hidden;
       perspective: 1px;
+      display: flex;
+      flex-direction: column;
+
     }
     header {
       background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 60%, var(--tertiary) 100%);
@@ -38,6 +41,10 @@
       clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
       position: relative;
       z-index: 5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
     }
     header::before, header::after {
       content: "";
@@ -79,6 +86,10 @@
       margin-bottom: 2rem;
       position: relative;
       box-shadow: 0 6px 32px rgba(67,206,162,0.12);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     }
     .hero-shape {
       position: absolute;
@@ -115,6 +126,9 @@
       margin: 0 auto;
       text-align: center;
       padding: 0 1rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
     .hero h2 {
       margin: 0 0 0.7rem 0;
@@ -138,7 +152,7 @@
       padding: 2rem 0;
       z-index: 3;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
             
     }
     .card-section-bg {
@@ -169,19 +183,18 @@
       padding: 3rem 1rem 4rem;
       position: relative;
       display: flex;
-      flex-direction: column;
-      align-items: center;   
-      gap: 2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2.5rem;
        
     }
     .card-row {
       width: 100%;
       gap: 2rem;
       display: flex;
-      justify-content: center;
-      align-items: center;
       flex-wrap: wrap;
-      gap 2rem;
+      justify-content: center; 
+      gap: 2.5rem;
 
     }
     .card-row:nth-child(even) {
@@ -190,6 +203,7 @@
       z-index: 2;
     }
     .card {
+      flex: 1 1 260px;
       max-width: 340px;
       min-width: 220px;
       background: linear-gradient(135deg, var(--primary) 0%, var(--accent3) 100%);
@@ -202,6 +216,9 @@
       overflow: hidden;
       background-size: 200% 200%;
       animation: gradientMove 5s ease-in-out infinite alternate;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
     }
     .card:nth-child(2) {
       background: linear-gradient(135deg, var(--secondary) 0%, var(--accent1) 100%);
@@ -257,6 +274,7 @@
       text-shadow: 0 1px 4px rgba(0,0,0,0.07);
     }
     .card-btn {
+      margin-top: auto;
       padding: 0.7rem 1.5rem;
       background: rgba(255,255,255,0.22);
       color: #fff;
@@ -347,7 +365,7 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center; 
+      gap: 1.5rem; 
     }
     .footer-divider {
       width: 80%;
@@ -361,15 +379,19 @@
       width: 100%;
       max-width: 900px;
       display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      gap: 2rem;
       flex-wrap: wrap;
+      justify-content: center;
+      gap: 2rem;
+      
     }
     .footer-section {
       flex: 1;
       min-width: 200px;
       text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.8rem
     }
     .footer-heading {
       font-weight: 600;
@@ -379,9 +401,8 @@
     .footer-links {
       display: flex;
       flex-direction: column;
-      gap: 0.5rem;
-      margin-top: 1rem;
-      align-items: center;
+      gap: 0.8rem;
+      
     }
     .footer-link {
       color: rgba(255,255,255,0.85);
@@ -415,8 +436,9 @@
     .footer-icons {
       margin-top: 1rem;
       display: flex;
+      flex-wrap: wrap;
       justify-content: center;
-      gap: 1.5rem;
+      gap: 1.2rem;
     }
     .footer-icon {
       width: 35px;
@@ -430,6 +452,9 @@
       user-select: none;
       position: relative;
       overflow: hidden;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
     }
     .footer-icon::before {
       content: "";
